@@ -10,7 +10,9 @@
 
 
 def task():
-    print() # Напечатайте значение процента от числа
+    a = int(input('Enter number: '))
+    b = int(input('Enter percent: '))
+    print(a*b/100) # Напечатайте значение процента от числа
 
 
 if __name__ == "__main__":
