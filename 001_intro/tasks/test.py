@@ -14,6 +14,8 @@ class MyTestCase(GkTest):
         for key in answers:
             x = key
             y = round(float(super().wrapper(lambda: task01.task(), x)), 2)
+            print(x)
+            print(y)
             answers[key] = str(y)
         self.assertEqual(assignment.check_assignment(5, 1, 'Square root', answers), True)
 
