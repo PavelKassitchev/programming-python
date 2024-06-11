@@ -10,10 +10,10 @@
 
 
 def task():
-    a = int(input('Enter number: '))
-    b = int(input('Enter percent: '))
-    print(a*b/100) # Напечатайте значение процента от числа
-
+    number = int(input('Введите число:'))
+    percent = int(input('Введите процент от этого числа(0-100):'))
+    result = number * (percent/100)
+    print(result) # Напечатайте вычисленную площадь
 
 if __name__ == "__main__":
     task()

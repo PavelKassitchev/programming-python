@@ -10,11 +10,12 @@
 
 
 def task():
-    a = int(input('Enter base: '))
-    b = int(input('Enter hight: '))
+    a = int(input('Введите основание треугольника: '))
+    h = int(input('Введите высоту треугольника: '))
 
-    print(a*b*0.5) # Напечатайте вычисленную площадь
+    area = 0.5 * a * h
 
+    print(area) # Напечатайте вычисленную площадь
 
 if __name__ == "__main__":
     task()
