@@ -13,7 +13,7 @@ def task():
     a = int(input('Enter base: '))
     b = int(input('Enter hight: '))
 
-    print(a*b/2) # Напечатайте вычисленную площадь
+    print(a*b*0.5) # Напечатайте вычисленную площадь
 
 
 if __name__ == "__main__":
