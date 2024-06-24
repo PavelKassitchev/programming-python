@@ -16,18 +16,19 @@
 # --------------------- Числа Фибоначчи ---------------------
 
 def fibonacci(n):
-    # num = int(input("Enter a number: "))
-    step = 1
-    fib_prev = 0
-    fib = 1
-    while True:
-        if n == step:
-            return fib_prev
-        step += 1
-        fib_temp = fib
-        fib += fib_prev
-        fib_prev = fib_temp
+    f_prev_prev = 0
+    f_prev = 1
 
+    if n == 1:
+        return f_prev_prev
+    elif n == 2:
+        return f_prev
 
-if __name__ == "__main__":
-    print(fibonacci(8))
+    f_n = 0
+    for i in range(n-2):
+        f_n = f_prev_prev + f_prev
+        f_prev_prev = f_prev
+        f_prev = f_n
+
+    return f_n
+
