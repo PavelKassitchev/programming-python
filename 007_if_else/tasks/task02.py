@@ -8,6 +8,15 @@
 # --------------------- Число или буква ---------------------
 
 def task():
+    a = ord(input("Enter a character: "))
+    if 48 <= a <= 57:
+        print("digit")
+    else:
+        if 91 > a > 64 or 96 < a < 123:
+            print("alpha")
+        else:
+            print("incorrect character")
+
     print()
 
 

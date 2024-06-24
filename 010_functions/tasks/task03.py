@@ -29,7 +29,31 @@
 # --------------------- Найти месяц по номеру дня в году ---------------------
 
 def get_month_by_day_number(day_number, is_leap_year):
-    pass
+    if day_number < 1 or day_number > 366 or (day_number == 366 and is_leap_year == False):
+        return "incorrect day number"
+    if day_number <= 31:
+        return "January"
+    if day_number <= 59 or (day_number == 60 and is_leap_year == True):
+        return "February"
+    if day_number <= 90 or (day_number == 91 and is_leap_year == True):
+        return "March"
+    if day_number <= 120 or (day_number == 121 and is_leap_year == True):
+        return "April"
+    if day_number <= 151 or (day_number == 152 and is_leap_year == True):
+        return "May"
+    if day_number <= 181 or (day_number == 182 and is_leap_year == True):
+        return "June"
+    if day_number <= 212 or (day_number == 213 and is_leap_year == True):
+        return "July"
+    if day_number <= 243 or (day_number == 244 and is_leap_year == True):
+        return "August"
+    if day_number <= 273 or (day_number == 274 and is_leap_year == True):
+        return "September"
+    if day_number <= 304 or (day_number == 305 and is_leap_year == True):
+        return "October"
+    if day_number <= 334 or (day_number == 335 and is_leap_year == True):
+        return "November"
+    return "December"
 
 
 if __name__ == "__main__":

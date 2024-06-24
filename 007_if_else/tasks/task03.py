@@ -13,7 +13,13 @@
 # --------------------- Прибыль или убыток ---------------------
 
 def task():
-    print()
+    purchase = float(input("Purchase: "))
+    sale = float(input("Sale: "))
+    dif = sale - purchase
+    if dif >= 0:
+        print("profit", round(dif, 2))
+    else:
+        print("loss", round(-dif, 2))
 
 
 if __name__ == "__main__":

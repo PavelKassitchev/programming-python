@@ -6,8 +6,10 @@
 # --------------------- Максимальное значение ---------------------
 
 def max(num1, num2):
-    pass
+    if num1 > num2:
+        return num1
+    return num2
 
 
 if __name__ == "__main__":
-    print(max(5, 10))
+    print(max(2.35, 2.351))

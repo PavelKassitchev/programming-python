@@ -16,7 +16,11 @@
 # --------------------- Credit scoring ---------------------
 
 def task():
-    print()
+    w = int(input('Enter wage: '))
+    a = int(input('Enter age: '))
+    b = int(input('Enter property: '))
+    res = (a >= 22 and w >= 500000) or (a >= 18 and w >= 650000) or (b == 1 and a >= 30)
+    print(res)
 
 
 if __name__ == "__main__":

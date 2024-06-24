@@ -15,7 +15,12 @@
 # --------------------- Вложенный цикл ---------------------
 
 def task():
-    print()
+    n = int(input("Enter n: "))
+    count = 1
+    for i in range(n):
+        print("*" * count)
+        count += 1
+
 
 
 if __name__ == "__main__":

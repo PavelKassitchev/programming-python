@@ -14,7 +14,15 @@
 
 
 def task():
-    print()
+    s = int(input('Enter number of seconds: '))
+    d = s // (3600 * 24)
+    s1 = s % (3600 * 24)
+    h = s1 // 3600
+    s2 = s1 % 3600
+    m = s2 // 60
+    sec = s2 % 60
+    print(str(d) + ' ' + str(h) + ' ' + str(m) + ' ' + str(sec))
+    
 
 
 if __name__ == "__main__":

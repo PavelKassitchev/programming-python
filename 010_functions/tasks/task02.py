@@ -16,7 +16,17 @@
 # --------------------- Числа Фибоначчи ---------------------
 
 def fibonacci(n):
-    pass
+    # num = int(input("Enter a number: "))
+    step = 1
+    fib_prev = 0
+    fib = 1
+    while True:
+        if n == step:
+            return fib_prev
+        step += 1
+        fib_temp = fib
+        fib += fib_prev
+        fib_prev = fib_temp
 
 
 if __name__ == "__main__":
