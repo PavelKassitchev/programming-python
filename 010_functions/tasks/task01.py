@@ -13,4 +13,4 @@ def max(num1, num2):
 
 
 if __name__ == "__main__":
-    print(max(2.35, 2.351))
+    print(max(5, 10))
