@@ -17,10 +17,16 @@
 
 
 def encode(original_str):
-    pass
+    encoded_str = ''
+    for c in original_str:
+        encoded_str += chr(ord(c) + 1)
+    return encoded_str
 
 def decode(encoded_str):
-    pass
+    decoded_str = ''
+    for c in encoded_str:
+        decoded_str += chr(ord(c) - 1)
+    return decoded_str
 
 
 if __name__ == "__main__":

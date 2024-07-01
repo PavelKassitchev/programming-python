@@ -17,7 +17,11 @@
 # --------------------- Парсим цену из html документ ---------------------
 
 def parse_price_from_document(doc_str):
-    pass
+    start = doc_str.find('"price" content') + 17
+    tail = doc_str[start:]
+    finish = tail.find(">")
+
+    return tail[:finish-1]
 
 
 if __name__ == "__main__":

@@ -11,7 +11,19 @@
 # --------------------- Количество слов ---------------------
 
 def word_count(str):
-    pass
+    flag = False
+    w = 0
+    for c in str:
+        if c == ' ':
+            flag = False
+        else:
+            if flag == False:
+                w += 1
+                flag = True
+            else:
+                continue
+    return w
+
 
 
 if __name__ == "__main__":

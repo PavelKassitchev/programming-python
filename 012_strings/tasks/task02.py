@@ -8,7 +8,20 @@
 # --------------------- trim ---------------------
 
 def trim(str):
-    pass
+
+    left = 0
+    right = len(str)
+    for c in str:
+        if c == ' ':
+            left += 1
+        else:
+            break
+    for c in str[::-1]:
+        if c == ' ':
+            right -= 1
+        else:
+            break
+    return str[left:right]
 
 
 if __name__ == "__main__":
