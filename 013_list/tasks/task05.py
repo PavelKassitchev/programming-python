@@ -21,10 +21,26 @@ def load_word_database():
 
 def search_by_pattern(pattern):
     word_database = load_word_database()
-    pass
+    print(len(pattern))
+    print(word_database)
+    for word in word_database[:]:
+        print("checking " + word)
+        if len(word) != len(pattern):
+            word_database.remove(word)
+            print("removing " + word)
+        else:
+            for i in range(len(word)):
+                if pattern[i] != '*' and pattern[i] != word[i]:
+                    word_database.remove(word)
+                    print("carefully removing " + word)
+                    break
+    return word_database
+
+
+
 
 
 if __name__ == "__main__":
     print(search_by_pattern("a**l*"))
-    print(search_by_pattern("test"))
-    print(search_by_pattern("t**"))
+   # print(search_by_pattern("test"))
+   # print(search_by_pattern("t**"))

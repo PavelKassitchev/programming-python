@@ -8,7 +8,11 @@
 # --------------------- Найти сумму всех отрицательных чисел ---------------------
 
 def negative_sum(num_list):
-    pass
+    s = 0
+    for el in num_list:
+        if el < 0:
+            s += el
+    return s
 
 
 if __name__ == "__main__":

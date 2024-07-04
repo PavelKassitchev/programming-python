@@ -11,7 +11,25 @@
 # --------------------- Мода ---------------------
 
 def moda(num_list):
-    pass
+    if len(num_list) == 0:
+        return None
+    num_list.sort()
+    print(num_list)
+    i = 1
+    j = 1
+    cur = num_list[0]
+    for k in range(1, len(num_list)):
+        if num_list[k] == num_list[k-1]:
+            j += 1
+        else:
+            if j > i:
+                i = j
+                cur = num_list[k-1]
+            j = 1
+        if j > i:
+            cur = num_list[k]
+    return cur
+
 
 
 if __name__ == "__main__":
