@@ -21,18 +21,18 @@ def load_word_database():
 
 def search_by_pattern(pattern):
     word_database = load_word_database()
-    print(len(pattern))
-    print(word_database)
+    # print(len(pattern))
+    # print(word_database)
     for word in word_database[:]:
-        print("checking " + word)
+        # print("checking " + word)
         if len(word) != len(pattern):
             word_database.remove(word)
-            print("removing " + word)
+            # print("removing " + word)
         else:
             for i in range(len(word)):
                 if pattern[i] != '*' and pattern[i] != word[i]:
                     word_database.remove(word)
-                    print("carefully removing " + word)
+                    # print("carefully removing " + word)
                     break
     return word_database
 
