@@ -16,7 +16,7 @@ def max_abs(num_list):
     max_val = 0
     val = 0
     for el in num_list:
-        if abs(el) > max_val:
+        if abs(el) > abs(max_val):
             max_val = abs(el)
             val = el
     return val
@@ -28,7 +28,7 @@ def min_abs(num_list):
     min_val = abs(num_list[0])
     val = num_list[0]
     for el in num_list:
-        if abs(el) < min_val:
+        if abs(el) < abs(min_val):
             min_val = abs(el)
             val = el
     return val
@@ -38,5 +38,4 @@ if __name__ == "__main__":
     print(max_abs([-100, 15, 50]))
     print(min_abs([-100, 15, 50]))
     print(min_abs([]))
-    print(min_abs([-1, 0, 10, 100, -600, 599]))
-    print(max_abs([-1, 0, 10, 100, -600, 599]))
+
