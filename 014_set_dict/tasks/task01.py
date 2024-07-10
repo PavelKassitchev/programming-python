@@ -9,7 +9,15 @@
 # --------------------- Найти n самых частых значений в списке ---------------------
 
 def find_n_most_common_values(num_list, n):
-    pass
+    val_dict = {}
+    for k in num_list:
+        if k in val_dict:
+            val_dict[k] += 1
+        else:
+            val_dict[k] = 1
+    listing = sorted(val_dict.items(), key=lambda x:x[1], reverse = True)
+    temp_list = listing[0 : n]
+    return [i[0] for i in temp_list]
 
 
 if __name__ == "__main__":
